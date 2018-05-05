@@ -64,6 +64,30 @@ span {
 #ib3 {
 }
 
+.navbar-collapse.collapsing #navbar-toggle #ib1 {
+    background-color: red;
+    -webkit-transform: rotate(45deg) translateY(4px) translateX(5px);
+    -moz-transform: rotate(45deg) translateY(4px) translateX(5px);
+    -o-transform: rotate(45deg) translateY(4px) translateX(5px);
+    -ms-transform: rotate(45deg) translateY(4px) translateX(5px);
+}
+
+.navbar-collapse.collapsing #navbar-toggle #ib2 {
+    background-color: red;
+    -webkit-transform: rotate(-45deg) translateY(0px) translateX(0px);
+    -moz-transform: rotate(-45deg) translateY(0px) translateX(0px);
+    -o-transform: rotate(-45deg) translateY(0px) translateX(0px);
+    -ms-transform: rotate(-45deg) translateY(0px) translateX(0px);
+}
+
+.navbar-collapse.collapsing #navbar-toggle #ib3 {
+    background-color: red;
+    -webkit-transform: rotate(-405deg) translateY(-4px) translateX(3px);
+    -moz-transform: rotate(-405deg) translateY(-4px) translateX(3px);
+    -o-transform: rotate(-405deg) translateY(-4px) translateX(3px);
+    -ms-transform: rotate(-405deg) translateY(-4px) translateX(3px);
+}
+
 .navbar-collapse.in #navbar-toggle #ib1 {
     background-color: red;
     -webkit-transform: rotate(45deg) translateY(4px) translateX(5px);
