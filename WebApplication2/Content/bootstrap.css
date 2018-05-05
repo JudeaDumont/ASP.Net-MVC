@@ -202,7 +202,10 @@ span {
 }
 
 footer {
-    margin-top: 60%;
+    margin-top: 86vh;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
 }
 
 li {
