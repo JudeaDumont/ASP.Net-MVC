@@ -162,6 +162,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\judeadumontportfolio - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\judeadumontsportfolio - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\UniqueAppNameX1 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
