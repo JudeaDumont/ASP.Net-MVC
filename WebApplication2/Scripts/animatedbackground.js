@@ -10,7 +10,7 @@
     function initHeader() {
         width = window.innerWidth;
         height = window.innerHeight;
-        colorDevisor = (width + height) / 1020; 
+        colorDevisor = (width + height) / 1020;
         target = { x: width / 2, y: height / 2 };
 
         canvas = document.getElementById('demo-canvas');
@@ -116,17 +116,17 @@
             for (var i in points) {
                 // detect points in range
                 if (Math.abs(getDistance(target, points[i])) < 4000) {
-                    points[i].active = 0.3;
-                    points[i].circle.active = 0.6;
+                    points[i].active = 0.17;
+                    points[i].circle.active = 1;
                 } else if (Math.abs(getDistance(target, points[i])) < 20000) {
-                    points[i].active = 0.1;
-                    points[i].circle.active = 0.3;
+                    points[i].active = 0.10;
+                    points[i].circle.active = 0.98;
                 } else if (Math.abs(getDistance(target, points[i])) < 40000) {
-                    points[i].active = 0.02;
-                    points[i].circle.active = 0.1;
+                    points[i].active = 0.05;
+                    points[i].circle.active = 0.97;
                 } else {
-                    points[i].active = 0;
-                    points[i].circle.active = 0;
+                    points[i].active = 0.01;
+                    points[i].circle.active = 0.96;
                 }
 
                 drawLines(points[i]);
@@ -156,41 +156,75 @@
     }
 
     function calculateColor(x, y) {
-        let number = ((x + y) / colorDevisor)*2;
-        //console.log(number);
-        let r = 0, g = 0, b = 0;
-        if (number > 0) {
-            r = number;
+        let number = ((x + y) / colorDevisor) * 1.75;
+        if (number > 1785) {
+            console.log(number);
         }
-        if (number > 255) {
-            r = 255;
-            b = number - 255;
-        }
-        if (number > 510) {
-            r = 765 - number;
-            b = 255;
-        }
-        if (number > 765) {
-            b = 255;
-            g = number - 765
-        }
-        if (number > 1020) {
-            b = 1020 - number;
-            g = 255;
-        }
-        if (number > 1275) {
-            g = 255;
-            r = number - 1275;
-        }
+        let r = 0, g = 0, b = 0, a = 0;
         if (number > 1530) {
             r = 255;
-            g = 1785 - number;
+            g = (1785 - number) * 1.7;
+        }
+        else if (number > 1275) {
+            g = 255;
+            r = (number - 1275) * 1.7;
+        }
+        else if (number > 1020) {
+            b = (1275 - number) * 1.3;
+            g = 255;
+        }
+        else if (number > 765) {
+            b = 255;
+            g = (number - 765);
+        }
+        else if (number > 510) {
+            r = (765 - number) * 1.3;
+            b = 255;
+        }
+        else if (number > 255) {
+            r = 255;
+            b = (number - 255) * 0.8;
+        }
+        else if (number > 0) {
+            r = number;
         }
 
+
+
+        if (r > 255) {
+            r = 255;
+        }
+        else if (r < 0) {
+            r = 0;
+        }
+        if (g > 255) {
+            g = 255;
+        }
+        else if (g < 0) {
+            g = 0;
+        }
+        if (b > 255) {
+            b = 255;
+        }
+        else if (b < 0) {
+            b = 0;
+        }
+
+        //a = 1 - (g/(r+b));
+        if (g) {
+            a = (g / 255) * 0.5;
+        }
+        else {
+        }
+        if (b > 200 && g < 150) {
+            a = 1 - ((b * 0.9) / 255);
+        }
+        //console.log(`r:${r}, g:${g}, b:${b}, a:${a}`);
         return {
             r,
             g,
-            b
+            b,
+            a
         }
     }
 
@@ -212,7 +246,7 @@
                 ',' +
                 color.b +
                 ',' +
-                (p.active * 1.50 + .10)
+                (p.active * 1.3 + .1 + (color.a)*0.3)
                 +
                 ')'
             );
@@ -244,7 +278,7 @@
             //        +
             //        ')', ease: Cubic.easeOut
             //});
-            
+
             ctx.stroke();
         }
     }
