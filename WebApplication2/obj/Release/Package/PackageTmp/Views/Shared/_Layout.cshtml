@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewBag.Title - Judea's Portfolio</title>
-    
+
     @Styles.Render("~/CSSBundle")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -20,6 +20,9 @@
             </button>
             <div class="navbar-nav">
                 @*Icons representing the different kinds of projects you've done*@
+                
+                @*Add data toggle similar to navbar-toggle essentially does the same thing*@
+                @*Pulls new window down from above to show videos on hacking stuff*@
                 <div id="white-hat" class="project-category">
                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                          width="167.000000pt" height="120.000000pt" viewBox="0 0 167.000000 120.000000"
@@ -85,6 +88,18 @@
                         </g>
                     </svg>
                     LinkedIn
+                </div>
+
+                <div id="youtube" class="project-category" onclick="location.href='https://www.youtube.com/channel/UC7daksFWm98QRTelP5fhtrQ?view_as=subscriber';">
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                         width="512.000000pt" height="384.000000pt" viewBox="0 0 512.000000 384.000000"
+                         preserveAspectRatio="xMidYMid meet" class="project-category-icon">
+                        <g transform="translate(0.000000,384.000000) scale(0.100000,-0.100000)"
+                           fill="#000000" stroke="none">
+                            <path class="svg-path" d="M1576 3829 c-816 -18 -971 -31 -1098 -95 -214 -107 -354 -287 -418 -539 -72 -280 -75 -2235 -5 -2535 60 -252 208 -447 420 -550 44 -22 109 -46 145 -54 130 -30 1048 -56 1965 -56 914 0 1788 26 1915 57 280 67 500 306 566 613 58 274 67 1968 12 2425 -40 335 -263 608 -560 684 -184 47 -1814 75 -2942 50z m1221 -1415 c395 -268 719 -487 720 -489 3 -1 -311 -215 -1259 -857 l-188 -127 0 979 c0 539 2 980 4 980 2 0 328 -219 723 -486z" />
+                        </g>
+                    </svg>
+                    Youtube
                 </div>
             </div>
         </div>

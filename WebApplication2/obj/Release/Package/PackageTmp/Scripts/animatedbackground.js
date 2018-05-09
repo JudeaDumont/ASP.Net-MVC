@@ -1,6 +1,6 @@
 ﻿(function () {
 
-    var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true, animated = false;
+    var colorDevisor, width, height, largeHeader, canvas, ctx, points, target, animateHeader = true, animated = false;
 
     // Main
     initHeader();
@@ -10,12 +10,14 @@
     function initHeader() {
         width = window.innerWidth;
         height = window.innerHeight;
+        colorDevisor = (width + height) / 1020; 
         target = { x: width / 2, y: height / 2 };
 
         canvas = document.getElementById('demo-canvas');
         canvas.width = width;
         canvas.height = height;
         ctx = canvas.getContext('2d');
+        ctx
 
         // create points
         points = [];
@@ -60,7 +62,7 @@
 
         // assign a circle to each point
         for (var point in points) {
-            var c = new Circle(points[point], 2 + Math.random() * 2, 'rgba(66,137,169)');
+            var c = new Circle(points[point], 2 + Math.random() * 2, 'rgba(66,137,169,.9)');
             points[point].circle = c;
         }
     }
@@ -142,8 +144,8 @@
                 //x: p.originX - 50 + Math.random() * 100,
                 //    y: p.originY - 50 + Math.random() * 100,
 
-                x: p.originX + rand * (target.x - p.originX)/1.2,
-                y: p.originY + rand * (target.y - p.originY)/1.2,
+                x: p.originX + rand * (target.x - p.originX) / 1.2,
+                y: p.originY + rand * (target.y - p.originY) / 1.2,
 
                 ease: Circ.easeInOut,
 
@@ -153,15 +155,96 @@
             });
     }
 
+    function calculateColor(x, y) {
+        let number = ((x + y) / colorDevisor)*2;
+        //console.log(number);
+        let r = 0, g = 0, b = 0;
+        if (number > 0) {
+            r = number;
+        }
+        if (number > 255) {
+            r = 255;
+            b = number - 255;
+        }
+        if (number > 510) {
+            r = 765 - number;
+            b = 255;
+        }
+        if (number > 765) {
+            b = 255;
+            g = number - 765
+        }
+        if (number > 1020) {
+            b = 1020 - number;
+            g = 255;
+        }
+        if (number > 1275) {
+            g = 255;
+            r = number - 1275;
+        }
+        if (number > 1530) {
+            r = 255;
+            g = 1785 - number;
+        }
+
+        return {
+            r,
+            g,
+            b
+        }
+    }
+
     // Canvas manipulation
     function drawLines(p) {
-        if (!p.active) return;
+        //if (!p.active) return;
         for (var i in p.closest) {
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p.closest[i].x, p.closest[i].y);
-            ctx.strokeStyle = 'rgba(66,137,169,' + p.active + ')';
-            //ctx.strokeStyle = 'rgba(0,0,0,' + p.active + ')';
+            var color = calculateColor(p.x, p.y);
+
+            var gradient = ctx.createLinearGradient(0, 0, 170, 0);
+            gradient.addColorStop("0",
+                'rgba(' +
+                color.r +
+                ',' +
+                color.g +
+                ',' +
+                color.b +
+                ',' +
+                (p.active * 1.50 + .10)
+                +
+                ')'
+            );
+            ctx.strokeStyle = gradient;
+
+            //ctx.strokeStyle = 'rgba(' +
+            //    color.r +
+            //    ',' +
+            //    color.g +
+            //    ',' +
+            //    color.b +
+            //    ',' +
+            //    (p.active * 1.50 + .35)
+            //    +
+            //    ')';
+
+            //TweenLite.to(ctx, 10, {
+            //    strokeStyle: 'rgba(' +
+            //        (color.r)
+            //        +
+            //        ',' +
+            //        (color.g)
+            //        +
+            //        ',' +
+            //        (color.b)
+            //        +
+            //        ',' +
+            //        (p.active * 1.50 + .35)
+            //        +
+            //        ')', ease: Cubic.easeOut
+            //});
+            
             ctx.stroke();
         }
     }
@@ -177,10 +260,13 @@
         })();
 
         this.draw = function () {
-            if (!_this.active) return;
+            //if (!_this.active) return;
             ctx.beginPath();
             ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
-            ctx.fillStyle = 'rgba(16,87,119,' + _this.active + ')';
+            ctx.fillStyle = 'rgba(255,255,255,' +
+                //(_this.active)
+                .8
+                + ')';
             ctx.fill();
         };
     }
