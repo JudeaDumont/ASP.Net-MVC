@@ -32,18 +32,23 @@ body {
     left: 27vw;
     background-color: rgba(255,255,255, .3);
     -webkit-transition: all 1s;
-    -webkit-transform: translateY(469px);
+    -webkit-transform: translateY(49vh);
     border-bottom: ridge 4px;
     border-color: lightskyblue;
     border-radius: 16px;
 }
 
     .category-window.collapse {
-        -webkit-transform: translateY(-410px);
+        -webkit-transform: translateY(-43vh);
     }
 
     .category-window.in {
     }
+
+.vid {
+    width: 100%;
+    height: 40%;
+}
 
 .nav-link {
     background-color: slategrey;
@@ -249,6 +254,13 @@ footer {
     flex-direction: row;
     justify-content: space-around;
 }
+
+    footer p {
+        -webkit-margin-before: 0.5vh;
+        -webkit-margin-after: 0.5vh;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+    }
 
 li {
 }
