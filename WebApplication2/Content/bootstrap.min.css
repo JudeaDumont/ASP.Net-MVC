@@ -24,30 +24,73 @@ body {
     justify-content: space-between;
 }
 
+
 .category-window {
     height: 90vh !important;
-    width: 50vw;
+    width: 98vw;
     position: fixed;
     z-index: 1;
-    left: 27vw;
     background-color: rgba(255,255,255, .3);
     -webkit-transition: all 1s;
-    -webkit-transform: translateY(49vh);
+    -webkit-transform: translateY(0vh);
     border-bottom: ridge 4px;
     border-color: lightskyblue;
     border-radius: 16px;
 }
 
     .category-window.collapse {
-        -webkit-transform: translateY(-43vh);
+        -webkit-transform: translateY(-90vh);
     }
 
     .category-window.in {
     }
 
+.category-container {
+    transition: all 1s ease-in-out;
+}
+
+    .category-container.collapse {
+        height: 7vh !important;
+        margin-bottom: 0px;
+    }
+
+    .category-container.in {
+        margin-bottom: 42px;
+    }
+
+
+.category-container {
+    height: auto !important;
+}
+
+#main-window.collapse .category-container {
+    height: 7vh !important;
+    visibility: hidden;
+}
+
+#main-window.collapsing .category-container {
+    height: 7vh !important;
+    visibility: hidden;
+}
+
+#main-window.in .project-category {
+}
+
 .vid {
     width: 100%;
-    height: 40%;
+    transition: all 1s ease-in-out;
+}
+
+#white-hat-container.collapse .vid {
+    height: 0;
+}
+
+#white-hat-container.in .vid {
+    height: 39vh;
+}
+
+#white-hat-container.collapsing .vid {
+    height: 0;
 }
 
 .nav-link {
@@ -80,9 +123,7 @@ body {
     flex-direction: row;
 }
 
-.navbar-toggle {
-    /*position: relative;*/
-    /*float: right;*/
+#main-window-toggle-button {
     padding: 9px;
     margin: 8px;
     background-color: lightsteelblue;
@@ -91,10 +132,11 @@ body {
     transition: background-color .5s ease-in-out;
 }
 
-    .navbar-toggle.collapsed {
-        /*position: relative;*/
-        display: inline-block;
-    }
+.navbar-toggle {
+    /*position: relative;*/
+    height: auto !important;
+    z-index: 4;
+}
 
     .navbar-toggle:hover {
         /*position: relative;*/
@@ -128,49 +170,49 @@ span {
 #ib3 {
 }
 
-.collapsing .navbar-toggle #ib1 {
+.navbar-toggle.collapsing #ib1 {
     -webkit-transform: rotate(45deg) translateY(4px) translateX(5px);
     -moz-transform: rotate(45deg) translateY(4px) translateX(5px);
     -o-transform: rotate(45deg) translateY(4px) translateX(5px);
     -ms-transform: rotate(45deg) translateY(4px) translateX(5px);
 }
 
-.collapsing .navbar-toggle #ib2 {
+.navbar-toggle.collapsing #ib2 {
     -webkit-transform: rotate(-45deg) translateY(0px) translateX(0px);
     -moz-transform: rotate(-45deg) translateY(0px) translateX(0px);
     -o-transform: rotate(-45deg) translateY(0px) translateX(0px);
     -ms-transform: rotate(-45deg) translateY(0px) translateX(0px);
 }
 
-.collapsing .navbar-toggle #ib3 {
+.navbar-toggle.collapsing #ib3 {
     -webkit-transform: rotate(-405deg) translateY(-4px) translateX(3px);
     -moz-transform: rotate(-405deg) translateY(-4px) translateX(3px);
     -o-transform: rotate(-405deg) translateY(-4px) translateX(3px);
     -ms-transform: rotate(-405deg) translateY(-4px) translateX(3px);
 }
 
-.in .navbar-toggle #ib1 {
+.navbar-toggle.in #ib1 {
     -webkit-transform: rotate(45deg) translateY(4px) translateX(5px);
     -moz-transform: rotate(45deg) translateY(4px) translateX(5px);
     -o-transform: rotate(45deg) translateY(4px) translateX(5px);
     -ms-transform: rotate(45deg) translateY(4px) translateX(5px);
 }
 
-.in .navbar-toggle #ib2 {
+.navbar-toggle.in #ib2 {
     -webkit-transform: rotate(-45deg) translateY(0px) translateX(0px);
     -moz-transform: rotate(-45deg) translateY(0px) translateX(0px);
     -o-transform: rotate(-45deg) translateY(0px) translateX(0px);
     -ms-transform: rotate(-45deg) translateY(0px) translateX(0px);
 }
 
-.in .navbar-toggle #ib3 {
+.navbar-toggle.in #ib3 {
     -webkit-transform: rotate(-405deg) translateY(-4px) translateX(3px);
     -moz-transform: rotate(-405deg) translateY(-4px) translateX(3px);
     -o-transform: rotate(-405deg) translateY(-4px) translateX(3px);
     -ms-transform: rotate(-405deg) translateY(-4px) translateX(3px);
 }
 
-.in .navbar-toggle:hover .icon-bar {
+.navbar-toggle.in:hover .icon-bar {
     background-color: darkred;
 }
 
@@ -186,11 +228,11 @@ span {
     -o-transition: all .5s ease-in-out;
 }
 
-.navbar-collapse.collapse .navbar-nav {
+.collapse .navbar-nav {
     -webkit-transform: translateX(-247px);
 }
 
-.navbar-collapse.in .navbar-nav {
+.in .navbar-nav {
     display: flex;
 }
 
@@ -217,6 +259,8 @@ span {
     margin-left: 0;
     object-fit: contain;
     margin-right: 16px;
+    position: fixed;
+    left: 10px;
 }
 
 .project-category {
@@ -227,6 +271,7 @@ span {
     margin-bottom: 20px;
     font-size: 27px;
     transition: .5s ease-in-out;
+    justify-content: center;
 }
 
     .project-category:hover {
@@ -241,6 +286,7 @@ span {
 
 
 #white-hat {
+    height: auto !important;
 }
 /*svg changes colors on hover*/
 /*todo: header information slides in*/
