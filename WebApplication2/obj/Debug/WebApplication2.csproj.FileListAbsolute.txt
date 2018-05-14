@@ -84,8 +84,8 @@ C:\Users\LABADMIN\source\repos\WebApplication2\WebApplication2\bin\Microsoft.AI.
 C:\Users\LABADMIN\source\repos\WebApplication2\WebApplication2\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\LABADMIN\source\repos\WebApplication2\WebApplication2\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\LABADMIN\source\repos\WebApplication2\WebApplication2\bin\Microsoft.AI.Web.xml
-C:\Users\LABADMIN\source\repos\WebApplication2\WebApplication2\obj\Debug\WebApplication2.csprojResolveAssemblyReference.cache
 C:\Users\LABADMIN\source\repos\WebApplication2\WebApplication2\obj\Debug\WebApplication2.csproj.CoreCompileInputs.cache
 C:\Users\LABADMIN\source\repos\WebApplication2\WebApplication2\obj\Debug\WebApplication2.csproj.CopyComplete
 C:\Users\LABADMIN\source\repos\WebApplication2\WebApplication2\obj\Debug\WebApplication2.dll
 C:\Users\LABADMIN\source\repos\WebApplication2\WebApplication2\obj\Debug\WebApplication2.pdb
+C:\Users\LABADMIN\source\repos\WebApplication2\WebApplication2\obj\Debug\WebApplication2.csprojResolveAssemblyReference.cache
