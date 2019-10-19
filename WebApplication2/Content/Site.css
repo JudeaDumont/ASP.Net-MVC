@@ -1,5 +1,6 @@
 ﻿body {
     margin-bottom : 0;
+    position : fixed;
 }
 
 /* Set padding to keep content from hitting the edges */
