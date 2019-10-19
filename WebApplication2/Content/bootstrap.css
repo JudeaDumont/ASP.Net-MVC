@@ -307,7 +307,7 @@ span {
 /*svg changes colors on hover*/
 /*todo: header information slides in*/
 .svg-path {
-    transition: .5s ease-in-out;
+    /*transition: .5s ease-in-out;*/
 }
 
 footer {
