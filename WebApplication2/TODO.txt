@@ -1,0 +1,3 @@
+﻿1. The links should be highlighted over a duration like their icon companions
+2. Links should open in new tabs
+3. Enable scrolling within the youtube window to fit more vids
