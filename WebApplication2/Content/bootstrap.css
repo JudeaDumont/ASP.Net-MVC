@@ -65,11 +65,9 @@ body {
 
 #main-window.collapse .category-container {
     height: 7vh !important;
-    visibility:hidden;
 }
 #main-window.collapsing .category-container {
     height: 7vh !important;
-    visibility: hidden;
 }
 
 #main-window.in .project-category {
@@ -90,11 +88,9 @@ body {
 }
 
 .category-container.collapse .vid {
-    visibility:hidden;
 }
 
 .category-container.collapsing .vid {
-    visibility: hidden;
 }
 
 .category-container.in .category-content{
