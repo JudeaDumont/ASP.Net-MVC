@@ -147,6 +147,10 @@ body {
     transition: background-color .5s ease-in-out;
 }
 
+#main-window-toggle-button:hover {
+    background-color: steelblue;
+}
+
 .navbar-toggle {
     /*position: relative;*/
     height: auto !important;
@@ -164,7 +168,7 @@ body {
     .navbar-toggle .icon-bar {
         display: block;
         width: 22px;
-        height: 2px;
+        height: 2.2px;
         border-radius: 1px;
     }
 
