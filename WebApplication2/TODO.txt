@@ -6,4 +6,4 @@
 6. Cyber security section needs to be sized better and scrollable vertically
 7. Fix the cyber security section header disapearing on main page collapse
 8. The section headers need to be re-organized to showcase largest talents first
-9. Create a button for dark mode
+9. Shrinking window vertically causes main window to erranously appear
