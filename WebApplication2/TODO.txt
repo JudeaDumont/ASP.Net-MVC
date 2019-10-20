@@ -6,3 +6,4 @@
 6. Cyber security section needs to be sized better and scrollable vertically
 7. The section headers need to be re-organized to showcase largest talents first
 8. Shrinking window vertically causes main window to erranously appear
+9. Animation state of main window button can get mixed up with the main windows state
