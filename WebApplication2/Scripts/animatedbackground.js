@@ -297,9 +297,9 @@
             //if (!_this.active) return;
             ctx.beginPath();
             ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
-            ctx.fillStyle = 'rgba(255,255,255,' +
+            ctx.fillStyle = 'rgba(0,0,8,' +
                 //(_this.active)
-                .8
+                .4
                 + ')';
             ctx.fill();
         };

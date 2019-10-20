@@ -1,6 +1,6 @@
 
 body {
-    background-color: rgb(250, 250, 255);
+    background-color: rgb(0, 0, 8);
     font-family: 'Goudy Old Style', Times, serif;
 }
 
@@ -30,7 +30,7 @@ body {
     width: 98vw;
     position: fixed;
     z-index: 1;
-    background-color: rgba(255,255,255, .3);
+    background-color: rgba(247,247,255, .05);
     -webkit-transition: all 1s;
     -webkit-transform: translateY(0vh);
     border-bottom: ridge 4px;
@@ -127,7 +127,7 @@ body {
 
 #header-title {
     font-size: 26px;
-    color: lightslategrey;
+    color: antiquewhite;
     margin-right: 20px;
     margin-left: 100px;
 }
@@ -141,14 +141,14 @@ body {
 #main-window-toggle-button {
     padding: 9px;
     margin: 8px;
-    background-color: lightsteelblue;
+    background-color: steelblue;
     border: 4px solid lightblue;
     border-radius: 4px;
     transition: background-color .5s ease-in-out;
 }
 
 #main-window-toggle-button:hover {
-    background-color: steelblue;
+    background-color: rgb(0,0,8);
 }
 
 .navbar-toggle {
@@ -240,7 +240,7 @@ span {
 }
 
 .icon-bar {
-    background-color: whitesmoke;
+    background-color: antiquewhite;
     transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
@@ -286,21 +286,19 @@ span {
     display: flex;
     flex-direction: row;
     align-items: center;
-    /*justify-content: space-between;*/
     margin-bottom: 20px;
     font-size: 27px;
-    /*transition: .5s ease-in-out;*/
     justify-content: center;
 }
 
     .project-category:hover {
-        color: lightsteelblue;
+        color: lightslategrey;
         cursor: pointer;
     }
 
         .project-category:hover .svg-path {
-            fill: lightsteelblue;
-            stroke: lightsteelblue;
+            fill: lightslategrey;
+            stroke: lightslategrey;
         }
 
 
