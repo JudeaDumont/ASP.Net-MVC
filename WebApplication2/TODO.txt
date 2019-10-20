@@ -1,2 +1,6 @@
-﻿1. Links should open in new tabs
-2. Enable scrolling within the youtube window to fit more vids
+﻿1. Reorganize the HTML in the main page
+2. Reorganize the CSS
+3. Ensure consistency in naming/branding across all links
+4. Write and potentially rewrite blog posts
+5. Make the Java software avaialble for download off of the spatial processing section
+6. Cyber security section needs to be sized better and scrollable vertically
