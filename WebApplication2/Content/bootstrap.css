@@ -124,11 +124,10 @@ body {
         text-decoration: none;
     }
 
-/*want a dark rotating image in the background*/
 
 #header-title {
     font-size: 26px;
-    color: midnightblue;
+    color: lightslategrey;
     margin-right: 20px;
     z-index: 2;
 }
