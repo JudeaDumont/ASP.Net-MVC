@@ -6,8 +6,6 @@ Ensure consistency in naming/branding across all links
 
 Make the Java software available for download off of the spatial processing section
 
-Cyber security section needs to be sized better and scrollable vertically
-
 The section headers need to be re-organized to showcase largest talents first
 
 Shrinking window vertically causes main window to erranously appear (fix on size boundaries)
