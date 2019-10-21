@@ -24,6 +24,12 @@ body {
     justify-content: space-between;
 }
 
+.category-illustration {
+    color: antiquewhite;
+    fill: antiquewhite;
+    stroke: antiquewhite;
+}
+
 
 .category-window {
     height: 90vh !important;
