@@ -11,7 +11,8 @@
     <body>
         <canvas id="demo-canvas"></canvas>
         <div id="header"> 
-            <button type="button" id="main-window-toggle-button" class="navbar-toggle collapse" data-toggle="collapse" data-target="#main-window,#main-window-toggle-button">
+            <button type="button" id="main-window-toggle-button" class="navbar-toggle collapse" data-toggle="collapse" data-target="#main-window,#main-window-toggle-button" 
+                    onclick="setTimeout(function () { getElementById('main-window-toggle-button').disabled = true; }, 1); setTimeout(function () { getElementById('main-window-toggle-button').disabled = false; }, 750);">
                 <span id="ib1" class="icon-bar"></span>
                 <span id="ib2" class="icon-bar"></span>
                 <span id="ib3" class="icon-bar"></span>
