@@ -4,8 +4,6 @@ Reorganize the CSS
 
 Ensure consistency in naming/branding across all links
 
-Write and potentially rewrite blog posts
-
 Make the Java software available for download off of the spatial processing section
 
 Cyber security section needs to be sized better and scrollable vertically
