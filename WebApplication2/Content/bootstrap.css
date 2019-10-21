@@ -298,10 +298,9 @@ span {
 #white-hat {
     height: auto !important;
 }
-/*svg changes colors on hover*/
-/*todo: header information slides in*/
+
 .svg-path {
-    /*transition: .5s ease-in-out;*/
+
 }
 
 footer {
