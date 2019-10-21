@@ -51,24 +51,20 @@ body {
 }
 
     .category-container.collapse {
-        height: 7vh !important;
-        margin-bottom: 0px;
     }
 
     .category-container.in {
-        margin-bottom: 15vh;
+
     }
 
 
 .category-container {
-    height: auto !important;
+    height: auto !important; /*Needed for proper collapse of white hat section*/
 }
 
 #main-window.collapse .category-container {
-    height: 7vh !important;
 }
 #main-window.collapsing .category-container {
-    height: 7vh !important;
 }
 
 #main-window.in .project-category {
