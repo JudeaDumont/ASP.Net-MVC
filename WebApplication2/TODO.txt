@@ -15,5 +15,3 @@ The section headers need to be re-organized to showcase largest talents first
 Shrinking window vertically causes main window to erranously appear (fix on size boundaries)
 
 Create size boundaries that change the layout, test by resizing the browser window and on mobile.
-
-Animation state of main window button can get mixed up with the main windows state
