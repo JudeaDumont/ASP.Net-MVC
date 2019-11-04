@@ -42,7 +42,8 @@ body {
     border-bottom: ridge 4px;
     border-color: lightskyblue;
     border-radius: 16px;
-    display:table;
+    display: table;
+    padding-top: 10px;
 }
 
     .category-window.collapse {
